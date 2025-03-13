@@ -1,0 +1,115 @@
+body
+  {
+  background-image: url(image/redlight1.png);
+  background-repeat: no-repeat;
+  background-size: 1920px, 1080px;
+  background-attachment: fixed;  /*это чтобы при прокрутке фон не двигался*/
+  }
+/* ----------------------------------------------------- */
+nav 
+  {
+  background: #201a19; /* цвет псевдошапки */ 
+  margin: 0;
+  }
+  
+nav ul 
+  {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  }
+  
+nav ul:after 
+  {
+  content: "";
+  display: table;
+  clear: both;
+  }
+  
+nav a 
+  {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+  }
+  
+.topmenu > li 
+  {
+  float: left;
+  position: relative;
+  border-left: 1px solid white;
+  }
+  
+.topmenu > li:first-child 
+  {
+  border-left: 0;
+  }
+  
+.topmenu > li > a 
+  {  
+  padding: 20px 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fbfbf8;
+  letter-spacing: 2px;
+  }
+  
+.topmenu > li > a.active, 
+
+.submenu a:hover 
+  {
+  color: #d83f2d;
+  }
+  
+.topmenu .fa, 
+
+.submenu .fa 
+  {
+  margin-left: 5px;
+  color: inherit;
+  }
+  
+.submenu 
+  {
+  position: absolute;
+  z-index: 5;
+  min-width: 200px;
+  background: #201a19;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  visibility: hidden;
+  opacity: 0; 
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  transition: .3s linear;  
+  }
+  
+.submenu li 
+  {
+  position: relative;
+  }
+  
+.submenu li a 
+  {
+  color: #FEFDFD;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-bottom: 1px solid black;
+  }
+  
+.submenu .submenu 
+  {
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  transition: .3s linear;
+  }
+  
+nav li:hover > .submenu 
+  {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+  }
+/* ----------------------------------------------------- */  

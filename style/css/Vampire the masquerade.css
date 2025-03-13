@@ -1,0 +1,167 @@
+body
+  {
+  background-image: url(/style/image/VTMMain.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+ /*бля, пиксели очень хуево ставяться, на свой страх и риск 
+   меняйте просто, если что меняйте на cover и не ебитесь, 
+   Я уже заебалась*/  
+  background-attachment: fixed;  /*это чтобы при прокрутке фон не двигался*/
+  }
+
+.main-cap /* общий для всего текста, лучше не трогать, если не готов*/
+  {
+  margin: auto;
+  color: white;
+  top:100px;
+  }
+  
+.main-cap-a1 /* надпись сверху главная*/
+  {
+  margin: auto; 
+  font-size: 20px;
+  font-family: monospace;
+  font-style: bold;
+  font-weight: 400;
+  color: #201a19;
+  text-shadow:
+    0 0 5px #d83f2d,
+    0 0 10px #d83f2d,
+    0 0 20px #d83f2d,
+    0 0 40px #fbfbf8, 
+    0 0 80px #fbfbf8,
+    0 0 90px #fbfbf8,
+    0 0 100px #fbfbf8,
+    0 0 150px #fbfbf8;
+  }
+  
+/* --------------------------работа с текстом--------------------------- */  
+
+.main-cap-a2 /* заголовки*/
+  {
+  margin: auto; 
+  font-size: 20px;
+  margin-left: 10%; /* отступ*/
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: #201a19;
+  text-shadow: 2px 2px 2px #d83f2d;
+  }
+  
+.main-cap-a3div /* отступы абзацев*/
+  { 
+  margin-right: 15%;
+  margin-left: 15%;
+  }	
+  
+.main-cap-a3 /* текст абзацев*/
+  {
+  margin: auto;
+  font-size: 15px; 
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 400;
+  color: #fbfbf8;
+  }
+  
+/* --------------------------ссылки мать их--------------------------- */
+  
+.leftimg  /* расположение текста, относительно картинок */
+   {
+   float:left; /* Выравнивание по левому краю */
+   margin: 0px 10px 0px 0px; /* Отступы вокруг картинки */
+   }
+   
+.rightimg  
+   {  
+   float:right; 
+   margin: 0px 0px 0px 10px; 
+   }   
+ 
+.main-cap-a5div /* текст ссылок и отступы ссылок*/
+  {
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 5%;
+  }
+ 
+.main-cap-a5div1 /* текст ссылок и отступы ссылок*/
+  {
+  text-align: right; /* Направление */ 
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 5%;
+  } 
+ 
+.main-cap-a4div /* текст ссылок и отступы ссылок*/
+  { 
+  font-size: 20px; 
+  font-style: normal;
+  font-family: monospace;
+  font-weight: 400;
+  display: inline-block; /* подсветка только ссылки*/ 
+  transition: color .5s ease-out;
+  position: relative;
+  text-decoration: underline #fbfbf8;
+  }
+ 
+.main-cap-a4 /* цвет текста ссылок*/
+  { 
+  text-decoration: none;
+  color: #201a19;
+  text-shadow: 2px 2px 2px #d83f2d;
+  } 
+  
+.main-cap-a4:visited /*посещенная*/
+  {
+  color: #fbfbf8;
+  text-shadow: 2px 2px 2px #d83f2d;
+  }    
+ 
+.main-cap-a4div ::before 
+  {
+  content: "";
+  position: absolute;
+  z-index: -1; /*это чтобы текст виден был*/
+  bottom: 0;
+  left: 0;
+  height: 0px; /*толщина начальной полоски до наведения*/
+  width: 100%;
+  background: #d83f2d; 
+  transition: height .5s ease-out;
+  }
+ 
+.main-cap-a4div:hover /*курсор над ссылкой*/
+  {
+  cursor: pointer; /*курсор в ввиде ладони при наведении*/
+  color: #d83f2d;
+  }
+ 
+.main-cap-a4div :hover::before
+  {
+  height: 100%;
+  } 
+  
+/* --------------------------текст под ссылками--------------------------- */  
+.letter::first-letter /*заглавная буква красная*/
+  {
+  color: #d83f2d;
+  font-size: 25px;	
+  font-family: Georgia, serif; 
+  }
+  
+.ssiltext
+  {
+  font-size: 20px;
+  color: #201a19;
+  font-style: normal;
+  font-family: sans-serif; 
+  }
+
+ .ssiltext1
+  {
+  font-size: 15px;
+  font-style: normal;
+  font-family: serif; 
+  }
